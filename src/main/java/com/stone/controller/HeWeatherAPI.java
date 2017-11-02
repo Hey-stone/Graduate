@@ -70,7 +70,7 @@ public class HeWeatherAPI {
 	 */
 	@RequestMapping(value="/queryAqi")
 	public @ResponseBody String QueryAqi(HttpServletRequest request,HttpServletResponse response){
-		String  httpUrl = "http://www.pm25.in/api/querys/aqi_ranking.json?token=Xp51QrouaGA2kCCBvssL";
+		String  httpUrl = "##";
 		String jsonResult = "";
 		System.out.println(count);
 		if(count++ > 0){  //已经访问过了 ，  使用本地的数据(仅供本地测试时使用)
@@ -91,7 +91,7 @@ public class HeWeatherAPI {
 	 */
 	@RequestMapping(value="/queryAqiByCityName")
 	public @ResponseBody String QueryAqiByCityName(HttpServletRequest request,HttpServletResponse response,String cityName){
-		String  httpUrl = "http://www.pm25.in/api/querys/aqi_details.json?city=CITYNAME&token=Xp51QrouaGA2kCCBvssL";
+		String  httpUrl = "##";
 		httpUrl = httpUrl.replace("CITYNAME", cityName);
 		log.info("The method QueryAqi httpUrl:"+httpUrl+",CITYNAME:"+cityName);
 		String jsonResult = GetAqi(httpUrl,"D:/"+cityName+".json");
