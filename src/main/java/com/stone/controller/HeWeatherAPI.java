@@ -54,7 +54,7 @@ public class HeWeatherAPI {
 	 */
 	@RequestMapping(value="/queryApi")
 	public @ResponseBody String QueryApi(HttpServletRequest request,HttpServletResponse response,String cityid){
-		String  httpUrl = "https://api.heweather.com/x3/weather?cityid=CITYID&key=Key";
+		String  httpUrl = "##";
 		httpUrl = httpUrl.replace("CITYID", cityid);
 		log.info("The method QueryApi httpUrl:"+httpUrl);
 		String jsonResult = GetAPI(httpUrl);
